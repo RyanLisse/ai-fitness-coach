@@ -1,0 +1,43 @@
+### Create a new thread
+POST http://localhost:3000/api/thread
+
+
+### Create a new assistant
+POST http://localhost:3000/api/assistant/create
+
+
+### Create a new message
+POST http://localhost:3000/api/message/create
+Content-Type: application/json
+
+{
+  "message": "Or a happy Meal?",
+  "threadId": "thread_rxOfeOtfi6LJ2wPJq8XVT5Kh"
+
+}
+
+### Get all messages in a list
+POST http://localhost:3000/api/message/list
+Content-Type: application/json
+
+{
+  "threadId": "thread_rxOfeOtfi6LJ2wPJq8XVT5Kh"
+}
+
+### Create a run of an assistant
+POST http://localhost:3000/api/run/create
+Content-Type: application/json
+
+{
+  "threadId": "thread_rxOfeOtfi6LJ2wPJq8XVT5Kh",
+  "assistantId": "asst_NgyTY2tMpir9Wu4NassKbUhh"
+}
+
+### Retrieve a run
+POST http://localhost:3000/api/run/retrieve
+Content-Type: application/json
+
+{
+  "threadId": "thread_rxOfeOtfi6LJ2wPJq8XVT5Kh",
+  "runId": "run_FzuxHdoFgQw0QQlLWL8V7Cat"
+}
